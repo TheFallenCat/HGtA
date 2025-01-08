@@ -1,0 +1,370 @@
+
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "WorkRelatedAccidents",
+				"abbreviation": "WRA",
+				"full": "Work Related Accidents",
+				"authors": [
+					"Mathieu Garant"
+				],
+				"version": "1.0.0",
+				"url": "",
+				"targetSchema": "1.1.0"
+			}
+		]
+	},
+	"item": [
+		{
+			"name": "Fool's Gold",
+			"source": "WorkRelatedAccidents",
+			"page": 0,
+			"type": "M",
+			"weaponCategory": "simple",
+			"properties": ["T", "F", "L"],
+			"reqAttune": true,
+			"curse":true,
+			"rarity": "rare",
+			"dmg1": "1d4",
+			"dmgType": "P",
+			"bonusWeapon": "+1",
+			"weight": 2,
+			"property": [
+				"L",
+				"T",
+				"F"
+			],
+			"range": "20/60",
+			"entries": [
+				"This rockclimbing pick is rusted and crooked. Beneath the rusted metal, a golden sheen shines in the light.",
+				"While holding this magic weapon, you gain a +1 bonus to attack and damage rolls made with it. {@i Fool's Gold} has 4 charges. When you hit a creature with this magic weapon, you can expend 1 charge to deal an additional 2d4 acid damage. You can also use an action to expend 3 charges and shine a blinding light in front of you. Each creature in 30ft cone originating from you must make DC 14 constitution saving throw or be blinded. At the end of each of its turns, a blinded creature can make a Constitution saving throw. On a success, the condition ends.",
+				{
+					"type": "entries",
+					"name": "Curse",
+					"entries": [
+						"Once you wield this cursed weapon, you can't get rid of it or end your attunement until you are targeted by a {@spell Remove Curse} spell or similar magic.",
+							{"type":"list", "items":[{"type":"entries", "name":"Greed", "entries":["Whenever you are in possession of gold, it magically corrodes, becoming worthless."]}]}
+					]
+				}
+			]
+		}
+	],
+	"feat": [
+		{
+			"name" : "Eye of the Far Realm",
+			"source": "WorkRelatedAccidents", 
+			"entries" : [
+				"By defeating the eldritch eye of the Far Realm, you have absorbed a fragment of its otherworldly power, allowing you to glimpse realities beyond comprehension and granting you the following benefits:",
+				{
+					"type": "entries",
+					"name": "Glimpse of Madness",
+					"entries": ["Increase your Intelligence or Wisdom by 1, to a maximum of 20."]
+				},
+				{
+					"type": "entries",
+					"name": "Warp Reality",
+					"entries": ["Once per short rest, you can use your action to slightly warp a small area (5-foot radius) within 60 feet of you, creating a brief spatial anomaly. This area becomes difficult terrain for 1 minute, and creatures entering or starting their turn in it must make a Wisdom saving throw or take psychic damage equal to 2d6."]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis"
+						],
+						"amount": 1
+					},
+					"hidden": true
+				}
+			]
+		}
+	],
+	"object": [
+		{
+			"name": "Kraken - Siege",
+			"size": [
+				"G"
+			],
+			"objectType": "SW",
+			"source": "WorkRelatedAccidents",
+			"ac": 15,
+			"hp": 50,
+			"entries":[
+				{
+					"type":"section",
+					"entries":[
+						{
+							"type":"entries",
+							"entries":[
+								{					
+									"type":"entries",
+									"name":"Siege Abilities",
+									"entries":[
+										{
+											"type":"entries",
+											"name":"As Above So Below",
+											"entries":[
+												" The Siege Actions taken by the Kraken during the Siege Phase affect which lair action is active in the combat phase."
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"actionEntries":[
+				{
+					"type":"section",
+					"entries":[
+						{
+							"type":"entries",
+							"entries":[
+								{
+									"type":"entries",
+									"name":"Siege Actions",
+									"entries":[
+										"The kraken can perform three Siege Actions during the Siege Phase.",
+										{
+											"type":"entries",
+											"name":"Lightning Crown",
+											"entries":[
+												"Siege attack Action: {@hit 5} to hit. {@h}5 (1d4 + 2) damage.",
+												{
+													"type":"quote",
+													"entries":[
+														"The coral growing on the Kraken’s back glows with electricity as lightning passes from its tail to its head, and then shoots out in a ray of concentrated energy, cutting through the city like a hot blade."
+													]
+												}
+											]
+										},
+										{
+											"type":"entries",
+											"name":"Monstrous Wave",
+											"entries":[
+												"Siege attack Action: {@hit 5} to hit. {@h}5 (1d4 + 2) damage. If used directly before the Lightning Crown action, the Lightning Crown action does an additional point of damage.",
+												{
+													"type":"quote",
+													"entries":[
+														"The Kraken rears back and bellows an awful song. Behind it, a massive wave rises from the ocean and crashes against the city."
+													]
+												}
+											]
+										},
+										{
+											"type":"entries",
+											"name":"Tentacle Slam",
+											"entries":[
+												"Siege attack Action: {@hit 5} to hit. {@h}7 (2d4 + 2) damage.",
+												{
+													"type":"quote",
+													"entries":[
+														"The Kraken uses its tentacles to ravage the city, knocking over entire buildings as its long limbs twist around the structures, reducing them to rubble."
+													]
+												}
+											]
+										},
+										{
+											"type":"entries",
+											"name":"Targeted Attack",
+											"entries":[
+												"Siege effect Action: {@hit 5} to happen. The GM selects a specific Siege Action in the player’s Siege stat block. On a success, that action is disabled until the end next Siege Phase.",
+												{
+													"type":"quote",
+													"entries":[
+														"The Kraken zeroes in on a specific foe and redirects a lightning strike from the storm above -- directly to them."
+													]
+												}
+											]
+										},
+										{
+											"type":"entries",
+											"name":"Unchaining (costs 2 actions)",
+											"entries":[
+												"Siege effect Action: {@hit 5} to happen. The kraken rids itself from an ongoing negative effect. On a success, the action that caused that effect is disabled until the next siege phase.",
+												{
+													"type":"quote",
+													"entries":[
+														"The kraken collects itself, sinking under the waves for a tense moment -- just enough for everyone to wonder if the fight is over -- only to reemerge from the waves reinvigorated."
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}		
+					]
+				},	
+				{
+					"type":"section",
+					"entries":[
+						{
+							"type":"entries",
+							"entries":[
+								{
+									"type":"entries",
+									"name":"Lair Actions",
+									"entries":[
+										{
+											"type":"entries",
+											"name":"Lightning Crown",
+											"entries":[
+												"The storm crackles with electricity, charging the atmosphere with its current. Attacks that deal lightning damage are rolled at advantage, and one additional die is added to their damage roll until the start of the next round."
+											]
+										},
+										{
+											"type":"entries",
+											"name":"Monstrous Wave",
+											"entries":[
+												"A wave crashes over the docks, bringing in more enemies. Bring forward as many as you need to replenish the numbers of the fight."
+											]
+										},
+										{
+											"type":"entries",
+											"name":"Tentacle Slam",
+											"entries":[
+												"The unmitigated assault of the Kraken shakes the ground itself. All creatures currently in contact with the ground must make a Dexterity saving throw (DC 14) or fall prone."
+											]
+										},
+										{
+											"type":"entries",
+											"name":"Unchaining",
+											"entries":[
+												"The sight of the Kraken emerging from the water once more, dashing the frail hope of the fight being over, shakes the defenders’ morale. Creatures hostile to the Kraken must make a Wisdom saving throw (DC 14) or become frightened of the Kraken Tentacles until the start of the next round."
+											]
+										}
+									]
+								}
+							]
+						}	
+					]	
+				}
+			]
+		}
+	],
+	"monster":[
+		{
+			"name": "Omegon Worker",
+			"source": "WorkRelatedAccidents",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any race"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d8",
+				"average": 9
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 10,
+			"int": 12,
+			"wis": 11,
+			"cha": 10,
+			"passive": 10,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"cr": "1/8",
+			"action": [
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage, or 5 ({@damage 1d8 + 1}) piercing damage if used with two hands to make a melee attack."
+					]
+				}
+			],
+			"environment": [
+				"urban"
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"miscTags": [
+				"RW",
+				"MW",
+				"THW"
+			],
+			"hasFluff": true,
+			"fluff": {
+				"name": "Omegon Worker",
+				"source": "WorkRelatedAccidents",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Omegon workers often give everything for their careers. Chosen sometimes for their ingenuity, and more often for their willingness to work, these workers know their craft and the corridors of their factory more then they even know the layout of their houses."
+								]
+							}
+						]
+					}
+				]
+			},
+			"damageTags": [
+				"P"
+			]
+		}
+	],
+	
+	"subclass":[
+		{
+			"name":"Omegon Artillerist",
+			"source":"WorkRelatedAccidents",
+			"className": "Artificer",
+			"classSource": "TCE",
+			"shortName":"Omegon Artillerist",
+			"subclassFeatures":[
+				"Tool Proficiency|Artificer|TCE|Artillerist|TCE|3",
+				"Artillerist Spells|Artificer|TCE|Artillerist|TCE|3",
+				"Eldritch Cannon|Artificer|TCE|Artillerist|TCE|3",
+				"Cannon Hacker|Artificer|TCE|Omegon Artillerist|WorkRelatedAccidents|3",
+				"Arcane Firearm|Artificer|TCE|Artillerist|TCE|5",
+				"Explosive Cannon|Artificer|TCE|Artillerist|TCE|9",
+				"Fortified Position|Artificer|TCE|Artillerist|TCE|15"
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name":"Cannon Hacker",
+			"source":"WorkRelatedAccidents",
+			"className":"Artificer",
+			"classSource":"TCE",
+			"subclassShortName":"Omegon Artillerist",
+			"subclassSource":"WorkRelatedAccidents",
+			"level":3,
+			"entries":[
+				"Through curiosity and sheer fucking will, you have let your mind run wild with the myriad of possible armamements you can create. The following options are added to your Eldritch Cannon types:"
+			]
+		}
+	]
+}
